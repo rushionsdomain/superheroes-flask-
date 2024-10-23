@@ -5,6 +5,7 @@ import Home from "./Home";
 import HeroPowerForm from "./HeroPowerForm";
 import Power from "./Power";
 import PowerEditForm from "./PowerEditForm";
+import HeroesList from "./HeroesList"; // Import the HeroesList component
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
           <Route exact path="/heroes/:id">
             <Hero />
           </Route>
+          <Route exact path="/heroes">
+            {" "}
+            {/* Add a new route for HeroesList */}
+            <HeroesList />
+          </Route>
           <Route exact path="/">
             <Home />
           </Route>
@@ -32,5 +38,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
